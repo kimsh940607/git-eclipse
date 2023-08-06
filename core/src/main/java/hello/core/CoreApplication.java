@@ -8,7 +8,7 @@ public class CoreApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CoreApplication.class, args);
-		System.out.print("test");
+		System.out.print("GIT 연동 테스트");
 	}
 
 }
