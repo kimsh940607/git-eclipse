@@ -1,12 +1,13 @@
 package hello.core.member;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import hello.core.AppConfig;
 import hello.core.memeber.Grade;
 import hello.core.memeber.Member;
 import hello.core.memeber.MemberService;
-import hello.core.memeber.MemberServiceImpl;
 
 /**
  * @Author sh.kim
@@ -15,7 +16,13 @@ import hello.core.memeber.MemberServiceImpl;
  */
 public class MemberServiceTest {
 
-	MemberService memberService = new MemberServiceImpl();
+	MemberService memberService;
+
+	@BeforeEach
+	public void beforEach() {
+		AppConfig appConfig = new AppConfig();
+		memberService = appConfig.memberService();
+	}
 	
 	@Test
 	void join() {
