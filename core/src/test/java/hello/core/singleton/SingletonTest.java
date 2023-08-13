@@ -33,6 +33,8 @@ public class SingletonTest {
 	void singletonServiceTest() {
 		SingletonService singletonService1 = SingletonService.getInstance();
 		SingletonService singletonService2 = SingletonService.getInstance();
+		
 		assertThat(singletonService1).isSameAs(singletonService2);
 	}
+	
 }
