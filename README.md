@@ -1,1 +1,1 @@
-# git-eclipse - Test
+Spring Study Project
