@@ -1,7 +1,8 @@
 package hello.core.memeber;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import lombok.RequiredArgsConstructor;
 
 /**
  * @Author sh.kim
@@ -9,14 +10,10 @@ import org.springframework.stereotype.Component;
  * MemberService 구현체
  */
 @Component
+@RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
 	
 	private final MemberRepository memberRepository;
-	
-	@Autowired
-	public MemberServiceImpl(MemberRepository memberRepository) {
-		this.memberRepository = memberRepository;
-	}
 	
 	@Override
 	public void join(Member member) {
